@@ -35,6 +35,13 @@ const useStyles = makeStyles({
     textAlign: "center",
   },
 
+  footer: {
+    position: "absolute",
+    width: "100%",
+    zIndex: "0",
+    top: "0",
+  },
+
   font: {
     fontWeight: "bold",
     padding: ".2em",
@@ -554,11 +561,18 @@ function App() {
         container
         alignItems="center"
         justify="center"
-        style={{ backgroundColor: "#374b5c", marginTop: "90px", color: "#FFF" }}
+        style={{
+          position: "relative",
+          marginTop: "90px",
+          paddingTop: "50px",
+          color: "#FFF",
+        }}
       >
+        <img src={Footer} alt="" className={styles.footer} />
+
         <Grid
           container
-          style={{ paddingTop: "80px", paddingLeft: "139px" }}
+          style={{ paddingTop: "80px", paddingLeft: "139px", zIndex: "1" }}
           alignItems="flex-start"
           justify="center"
           direction="column"
@@ -585,7 +599,7 @@ function App() {
         </Grid>
         <Grid
           container
-          style={{ paddingTop: "80px", paddingLeft: "139px" }}
+          style={{ paddingTop: "80px", paddingLeft: "139px", zIndex: "1" }}
           alignItems="flex-start"
           justify="center"
           direction="column"
@@ -619,7 +633,7 @@ function App() {
         </Grid>
         <Grid
           container
-          style={{ paddingTop: "80px", paddingLeft: "139px" }}
+          style={{ paddingTop: "80px", paddingLeft: "139px", zIndex: "1" }}
           alignItems="flex-start"
           justify="center"
           direction="column"
